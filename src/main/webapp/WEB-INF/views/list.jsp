@@ -15,6 +15,10 @@
             var a = confirm("Are you sure? ");
             if(a) location.href='deleteok/' + id;
         }
+        function logout_ok() {
+            var b = confirm("Are you sure? ");
+            if(b) location.href='../login/logout/';
+        }
     </script>
     <style>
         table {
@@ -26,7 +30,8 @@
     </style>
 </head>
 <body>
-<h1>자유게시판</h1>
+<h1>자유게시판</h1> <a href = "javascript:logout_ok()">logout</a>
+<br>
 <table id="list" width="90%">
     <tr>
         <th>Id</th>
