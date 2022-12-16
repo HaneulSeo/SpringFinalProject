@@ -30,32 +30,32 @@
     </style>
 </head>
 <body>
-<h1>자유게시판</h1> <a href = "javascript:logout_ok()">logout</a>
+<h1>PRS BOARD</h1> <a href = "javascript:logout_ok()">logout</a>
 <br>
 <table id="list" width="90%">
     <tr>
         <th>Id</th>
-        <th>Category</th>
-        <th>Title</th>
-        <th>Writer</th>
-        <th>Content</th>
+        <th>Identity</th>
+        <th>Group</th>
+        <th>User Name</th>
         <th>Regdate</th>
+        <th>Content detail</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
     <c:forEach items="${list}" var="u">
         <tr>
             <td>${u.seq}</td>
-            <td>${u.category}</td>
-            <td>${u.title}</td>
-            <td>${u.writer}</td>
-            <td>${u.content}</td>
+            <td>${u.identity}</td>
+            <td>${u.groupin}</td>
+            <td>${u.name}</td>
             <td>${u.regdate}</td>
+            <td><a href = "content/${u.seq}">Content</a></td>
             <td><a href="editform/${u.seq}">Edit</a></td>
             <td><a href="javascript:delete_ok(${u.seq})">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
-<br/><a href="add">Add New Post</a>
+<br/><a href="add">Add New Page</a>
 </body>
 </html>

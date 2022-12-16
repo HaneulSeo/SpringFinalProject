@@ -5,7 +5,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Edit Form</title>
+<title>Edit Page</title>
+	<style>
+		th, td {
+			padding: 15px;
+			text-align: left;
+			border: 1px solid;
+			border-collapse: collapse;
+		}
+		th {
+			background-color: bisque;
+			font-weight: bold;
+		}
+		table {
+			border-collapse: collapse;
+		}
+	</style>
 </head>
 <body>
 <h1>Edit Form</h1>
@@ -13,10 +28,9 @@
 <form:form modelAttribute="u" method="POST" action="../editok">
 <form:hidden path="seq"/>
 <table id="edit">
-	<tr><td>Category:</td><td><form:input path="category" /></td></tr>
-<tr><td>Title:</td><td><form:input path="title" /></td></tr>
-<tr><td>Writer:</td><td><form:input path="writer" /></td></tr>
-<tr><td>Content:</td><td><form:textarea cols="50" rows="5" path="content" /></td></tr>
+	<tr><th>Bible:</th><td><form:input path="bible" /></td></tr>
+<tr><th>Content:</th><td><form:textarea cols="50" rows="5" path="content" /></td></tr>
+	<tr><th>Prayer:</th><td><form:textarea cols="30" rows="5" path="prayer" /></td></tr>
 </table>
 	<input type="submit" value="Edit"/>
 	<input type="button" value="cancel" onclick="history.back()">

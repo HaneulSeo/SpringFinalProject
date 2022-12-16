@@ -1,6 +1,10 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<head>
+    <title>Index</title>
+</head>
 <body>
-<h2>Hello World!!!</h2>
-<a href="list">게시판으로 이동</a>
+<h1>Home</h1>
+<a href="login/login">Go to login page</a>
 </body>
 </html>

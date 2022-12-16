@@ -33,6 +33,13 @@ public class BoardController {
         return "redirect:list";
     }
 
+    @RequestMapping(value = "/content/{id}", method = RequestMethod.GET)
+    public String content(@PathVariable("id") int id, Model model) {
+        BoardVo boardVo = boardService.getBoard(id);
+        model.addAttribute("u",boardVo);
+        return "content";
+    }
+
     @RequestMapping(value = "/editform/{id}", method = RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model) {
         BoardVo boardVo = boardService.getBoard(id);
